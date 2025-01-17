@@ -50,10 +50,10 @@ def get_noun(quantity):
           the returned noun is single or plural.
   Return: a randomly chosen noun.
     """
-    if quantity == 1:
+  if quantity == 1:
         words = ["bird", "boy", "car", "cat", "child","dog", "girl", "man", "rabbit", "woman"]
-    else:
+  else:
         words = ["birds", "boys", "cars", "cats", "children","dogs", "girls", "men", "rabbits", "women"]
 # Randomly choose and return a determiner
-    word = random.choice(words)
-    return word
+  word = random.choice(words)
+  return word
