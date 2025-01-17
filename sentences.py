@@ -35,3 +35,25 @@ def get_determiner(quantity):
   # Randomly choose and return a determiner.
   word = random.choice(words)
   return word
+def get_noun(quantity):
+  """Return a randomly chosen noun.
+  If quantity is 1, this function will
+  return one of these ten single nouns:
+      "bird", "boy", "car", "cat", "child",
+      "dog", "girl", "man", "rabbit", "woman"
+  Otherwise, this function will return one of
+  these ten plural nouns:
+      "birds", "boys", "cars", "cats", "children",
+      "dogs", "girls", "men", "rabbits", "women"
+  Parameter
+      quantity: an integer that determines if
+          the returned noun is single or plural.
+  Return: a randomly chosen noun.
+    """
+    if quantity == 1:
+        words = ["bird", "boy", "car", "cat", "child","dog", "girl", "man", "rabbit", "woman"]
+    else:
+        words = ["birds", "boys", "cars", "cats", "children","dogs", "girls", "men", "rabbits", "women"]
+# Randomly choose and return a determiner
+    word = random.choice(words)
+    return word
