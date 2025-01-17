@@ -84,7 +84,14 @@ def get_verb(quantity, tense):
   """
   if tense.lowercase() == "past":
       verbs = ["drank", "ate", "grew", "laughed", "thought", "ran", "slept", "talked", "walked", "wrote"]
-  elif tense.lowercase() == "past"::
-      verbs = ["birds", "boys", "cars", "cats", "children","dogs", "girls", "men", "rabbits", "women"]
-Randomly choose and return a determiner
-word = random.choice(words)
+  elif tense.lowercase() == "present" :
+       if quantity == 1: 
+        verbs = ["drinks", "eats", "grows", "laughs", "thinks","runs", "sleeps", "talks", "walks", "writes"]
+       else:       
+        verbs = ["drink", "eat", "grow", "laugh", "think","run", "sleep", "talk", "walk", "write"]
+      #preguntar si es presente que entre y alli bifurque en 1 y en 0
+  else:
+    verbs = ["will drink", "will eat", "will grow", "will laugh","will think", "will run", "will sleep", "will talk","will walk", "will write"]
+
+# Randomly choose and return a determiner
+# word = random.choice(words)
