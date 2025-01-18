@@ -23,7 +23,8 @@ def get_prepositional_phrase(quantity):
   determiner=get_determiner(quantity)
   noun=get_noun(quantity)
   sentence = f"{preposition} {determiner} {noun} "
-  prepositional_phrase=sentence.capitalize()
+  prepositional_phrase=sentence
+#   prepositional_phrase=sentence.capitalize()
   print(f"from GET PROPOSITIONAL PHRASE the prepositional phrase is ",random.choices(prepositional_phrase))
   return random.choice(prepositional_phrase)
   
