@@ -11,20 +11,20 @@ def main():
         
         
 def get_prepositional_phrase(quantity):
-  """Build and return a prepositional phrase composed
-  of three words: a preposition, a determiner, and a
-  noun by calling the get_preposition, get_determiner,
-  and get_noun functions.
+  """Build and return a prepositional phrase composed   of three words: a preposition, a determiner, and a
+  noun by calling the get_preposition, get_determiner,and get_noun functions.
   Parameter
-      quantity: an integer that determines if the
-          determiner and noun in the prepositional
-          phrase returned from this function should
-          be single or pluaral.
+      quantity: an integer that determines if the determiner and noun in the prepositional
+          phrase returned from this function should be single or pluaral.
   Return: a prepositional phrase.
   """       
   preposition=get_preposition() 
   determiner=get_determiner(quantity)
   noun=get_noun(quantity)
+  sentence = f"{preposition} {determiner} {noun} "
+  prepositional_phrase=sentence.capitalize()
+  print(f"the prepositional phrase is ",prepositional_phrase)
+  return prepositional_phrase
   
 def get_preposition():
     """Return a randomly chosen preposition
@@ -70,7 +70,8 @@ def make_sentence():
         determiner = get_determiner(quantity)
         noun = get_noun(quantity)
         verb = get_verb(quantity,tense)
-        sentence = f"{determiner} {noun} {verb}."
+        prepositional_phrase=get_prepositional_phrase(quantity)
+        sentence = f"{determiner} {noun} {verb} {prepositional_phrase}."
         all=sentence.capitalize()
         return all
     
