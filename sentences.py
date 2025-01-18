@@ -19,7 +19,7 @@ def get_prepositional_phrase(quantity):
   Return: a prepositional phrase.
   """       
   preposition=get_preposition() 
-  print(f"the preposition from get_prepositional_phrase is: "),preposition
+  print(f"the preposition from get_prepositional_phrase is: ",preposition)
   determiner=get_determiner(quantity)
   noun=get_noun(quantity)
   sentence = f"{preposition} {determiner} {noun} "
@@ -39,7 +39,7 @@ def get_preposition():
     "beyond", "by", "despite", "except", "for","from", "in", "into", "near", "of",
     "off", "on", "onto", "out", "over","past", "to", "under", "with", "without"]
     # Randomly choose and return a preposition. 
-    print(f"from GET_PREPOSITION The random preposition is: ",preposition)
+    print(f"from GET_PREPOSITION The random preposition is: ",random.choice(preposition))
     return random.choice(preposition)
         
 def get_valid_option():#get a valid number from the user    
