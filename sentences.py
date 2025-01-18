@@ -19,12 +19,13 @@ def get_prepositional_phrase(quantity):
   Return: a prepositional phrase.
   """       
   preposition=get_preposition() 
+  print(f"the preposition from get_prepositional_phrase is: "),preposition
   determiner=get_determiner(quantity)
   noun=get_noun(quantity)
   sentence = f"{preposition} {determiner} {noun} "
   prepositional_phrase=sentence.capitalize()
-  print(f"the prepositional phrase is ",prepositional_phrase)
-  return prepositional_phrase
+  print(f"the prepositional phrase is ",random.choices(prepositional_phrase))
+  return random.choice(prepositional_phrase)
   
 def get_preposition():
     """Return a randomly chosen preposition
@@ -37,8 +38,8 @@ def get_preposition():
     preposition = ["about", "above", "across", "after", "along","around", "at", "before", "behind", "below",
     "beyond", "by", "despite", "except", "for","from", "in", "into", "near", "of",
     "off", "on", "onto", "out", "over","past", "to", "under", "with", "without"]
-    # Randomly choose and return a determiner. 
-    print(f"The random preposition is: ",preposition)
+    # Randomly choose and return a preposition. 
+    print(f"from GET_PREPOSITION The random preposition is: ",preposition)
     return random.choice(preposition)
         
 def get_valid_option():#get a valid number from the user    
@@ -71,6 +72,7 @@ def make_sentence():
         noun = get_noun(quantity)
         verb = get_verb(quantity,tense)
         prepositional_phrase=get_prepositional_phrase(quantity)
+        print(f"from the def make sentence, the prepositional phrase is: ",prepositional_phrase)
         sentence = f"{determiner} {noun} {verb} {prepositional_phrase}."
         all=sentence.capitalize()
         return all
