@@ -97,8 +97,8 @@ def parse_formula(formula, periodic_table_dict):
              print(formula_list)  
              break   
     # return formula_list
-    for row in formula_list:
-        if row[0] in 
+    # for row in formula_list:
+        # if row[0] in 
           
     
     
