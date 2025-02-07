@@ -4,15 +4,15 @@ from formula import parse_formula
 # Load the Excel file
 # df = pd.read_excel(file_path)
 
-file_path = 'periodic.xlsx'
+# file_path = 'periodic.xlsx'
 def main():
     # Main function that calls all the other functions.
     # Load the periodic table
-    periodic_table = make_periodic_table()
-    print(periodic_table)
-    for row in periodic_table:
-        print(row)
     
+    # print(periodic_table)
+    # for row in periodic_table:
+        # print(row)
+    periodic_table = make_periodic_table()
     # Create a dictionary using the periodic table list
     periodic_table_dict = {element[0]: element[1:] for element in periodic_table}
     print(periodic_table_dict)

@@ -108,20 +108,27 @@ table = [
     ]
 # Create a dictionary using the periodic table list
 periodic_table_dict = {element[0]: element[1:] for element in table}
-# print(periodic_table_dict)
+print(periodic_table_dict)
+# [['C', 1], ['H', '3'], ['C', 1] , ['Na', 1]] 
 
-list_test=[['C', 1], ['H', '3'], ['C', 1] , ['Na', 1]]
+list_test=[["H", 2], ["O", 1]]
 sum=0
+valor_element=0
 for element in list_test:
   if element[0] in periodic_table_dict:
        x=element[0]
-       sum=sum+int(element[1])
+      #  sum=sum+int(element[1])
+      
        print(f"la suma es {sum}")
        y = periodic_table_dict.get(x)
        print("el valor de x es: ",x)
        print("el valor de y es: ",y)
        print("el valor de y es: ",y[0])
        print("el valor de y es: ",y[1])
+       valor_element=(float(y[1]*float(element[1])))+valor_element
+       suma_element=valor_element+sum
+       print(f"el valor de elemento es {x} es {valor_element}: ")
+       print(f"la suma es {suma_element}")
        
   else:
     print("false")  
