@@ -41,15 +41,27 @@ def compute_molar_mass(symbol_quantity_list, periodic_table_dict):
     1.00794 * 2 + 15.9994 * 1
     18.01528
     """
-    
-    # Do the following for each inner list in the
-    # compound symbol_quantity_list:
-        # Separate the inner list into symbol and quantity.
-        # Get the atomic mass for the symbol from the dictionary.
-        # Multiply the atomic mass by the quantity.
-        # Add the product into the total molar mass.
-    # Return the total molar mass.
-    return
+    sum=0
+    valor_element=0
+    for element in symbol_quantity_list:
+      if element[0] in periodic_table_dict:
+           x=element[0]       
+           print(f"la suma es {sum}")
+           y = periodic_table_dict.get(x)                          
+           valor_element=(float(y[1]*float(element[1])))+valor_element
+           suma_element=valor_element+sum                
+      else:
+        print("false")  
+
+        # Do the following for each inner list in the
+        # compound symbol_quantity_list:
+            # Separate the inner list into symbol and quantity.
+            # Get the atomic mass for the symbol from the dictionary.
+            # Multiply the atomic mass by the quantity.
+            # Add the product into the total molar mass.
+        # Return the total molar mass.
+    print(f"el valor de elemento es {x} es {valor_element}: ")    
+    return suma_element
 
 def make_periodic_table():    
     table= [
