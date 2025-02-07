@@ -116,18 +116,18 @@ sum=0
 valor_element=0
 for element in list_test:
   if element[0] in periodic_table_dict:
-       x=element[0]
+      #  x=element[0]
       #  sum=sum+int(element[1])
       
        print(f"la suma es {sum}")
-       y = periodic_table_dict.get(x)
-       print("el valor de x es: ",x)
+       y = periodic_table_dict.get(element[0])
+       print("el valor de x es: ",element[0])
        print("el valor de y es: ",y)
        print("el valor de y es: ",y[0])
        print("el valor de y es: ",y[1])
        valor_element=(float(y[1]*float(element[1])))+valor_element
        suma_element=valor_element+sum
-       print(f"el valor de elemento es {x} es {valor_element}: ")
+       print(f"el valor de elemento es {element[0]} es {valor_element}: ")
        print(f"la suma es {suma_element}")
        
   else:
